@@ -6,32 +6,42 @@
 **Example:**  
 **Input:** `power(2,3)` ––> **Output:** `8`
 // solution
-const power = (a,b) => {
+
+`const power = (a,b) => {
+
     let result=1
     for(let i=0;i<b;i++){
         result*=a
     }
     return result
-}
+}`
+
 // or
-const power = (a,b) => a**b
+
+`const power = (a,b) => a**b`
 1. Given length of a regular hexagon, your function should return area of the hexagon.  
 **Example:**  
 **Input:** `areaOfHexagon(10)` ––> **Output:** `259.80`
+
 // solution
-const areaHexagon = side => (3*Math.sqrt(3)/2)*(side**2)
+
+`const areaHexagon = side => (3*Math.sqrt(3)/2)*(side**2)`
 1. Given a sentence, your functions should return the number of words in the sentence.  
 **Example:**  
-**Input:** `noOfWords(We are neoGrammers)` ––> **Output:** `3`
+**Input:** `noOfWords(We are neoGrammers)` ––> **Output:**`3
+`
 //solution
-const numOfWords = sentnce => sentnce.split().length
+
+`const numOfWords = sentnce => sentnce.split().length`
 1. Given n numbers, your function should return the minimum of them all. The number of parameters won't be accepted from user.  
 **Example:**  
 **Input:** `findMin(3,5)` ––> **Output:** `3`  
 **Input:** `findMin(3,5,9,1)` ––> **Output:** `1`  
 *(Hint: Lookup rest parameters in JavaScript)*
+
 //solution
-const minNum = (...rest) => {
+
+`const minNum = (...rest) => {
     let minVal = Number.MAX_SAFE_INTEGER
 
     for(let num of rest){
@@ -39,8 +49,10 @@ const minNum = (...rest) => {
     }
     return minVal
 }
-//or 
-const minNum = (...rest) => Math.min.apply(null,rest)
+`
+//or
+
+`const minNum = (...rest) => Math.min.apply(null,rest)`
 //apply passes the array-like DS we give as parameters, null is used here because Math.min doesn't need any context here (which `this` provides
 
 1. Given n numbers, your function should return the maximum of them all. The number of parameters won't be accepted from user.  
@@ -48,8 +60,10 @@ const minNum = (...rest) => Math.min.apply(null,rest)
 **Input:** `findMax(3,5)` ––> **Output:** `5`  
 **Input:** `findMax(3,5,9,1)` ––> **Output:** `9`  
 *(Hint: Lookup rest parameters in JavaScript)*
+
 //Solution
-const maxNum = (...rest) => {
+
+`const maxNum = (...rest) => {
     let maxVal = Number.MIN_SAFE_INTEGER
 
     for(let num of rest){
@@ -57,14 +71,19 @@ const maxNum = (...rest) => {
     }
     return maxVal
 }
+`
 //or
-const maxNum = (...rest) => Math.max.apply(null,rest)
+
+`const maxNum = (...rest) => Math.max.apply(null,rest)`
  
 1. Given three angles of a triange, your function should return if it is a scalene, isosceles, equilateral triangle or not a triangle at all.
 **Example:**  
 **Input:** `typeOfTriangle(30, 60, 90)` ––> **Output:** `Scalene Triangle`
+
 //solution
-const typeOfTriangle = (a,b,c) => {
+
+`const typeOfTriangle = (a,b,c) => {
+
     if(a+b+c === 180){
         if(a===b || b===c){
             if(a===b && b===c){
@@ -83,7 +102,7 @@ const typeOfTriangle = (a,b,c) => {
     else{
         console.log("Not a traingle")
     }
-}
+}`
 
 ## Medium
 
