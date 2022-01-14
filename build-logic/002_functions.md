@@ -7,14 +7,16 @@
 **Input:** `power(2,3)` ––> **Output:** `8`
 // solution
 
-`const power = (a,b) => {
+```
+const power = (a,b) => {
 
     let result=1
     for(let i=0;i<b;i++){
         result*=a
     }
     return result
-}`
+}
+```
 
 // or
 
@@ -41,7 +43,8 @@
 
 //solution
 
-`const minNum = (...rest) => {
+```
+const minNum = (...rest) => {
     let minVal = Number.MAX_SAFE_INTEGER
 
     for(let num of rest){
@@ -49,7 +52,7 @@
     }
     return minVal
 }
-`
+```
 //or
 
 `const minNum = (...rest) => Math.min.apply(null,rest)`
@@ -63,7 +66,8 @@
 
 //Solution
 
-`const maxNum = (...rest) => {
+```
+const maxNum = (...rest) => {
     let maxVal = Number.MIN_SAFE_INTEGER
 
     for(let num of rest){
@@ -71,7 +75,7 @@
     }
     return maxVal
 }
-`
+```
 //or
 
 `const maxNum = (...rest) => Math.max.apply(null,rest)`
@@ -82,7 +86,8 @@
 
 //solution
 
-`const typeOfTriangle = (a,b,c) => {
+```
+const typeOfTriangle = (a,b,c) => {
 
     if(a+b+c === 180){
         if(a===b || b===c){
@@ -102,7 +107,8 @@
     else{
         console.log("Not a traingle")
     }
-}`
+}
+```
 
 ## Medium
 
