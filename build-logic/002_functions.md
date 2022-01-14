@@ -115,18 +115,73 @@ const typeOfTriangle = (a,b,c) => {
 1. Given an array, your function should return the length of the array.  
 **Example:**  
 **Input:** `arrayLength([1,5,3,7,8])` ––> **Output:** `5`
+// Solution
+```
+const arrLength = arr =>{
+    let count=0
+    for( const item in arr){
+        count++
+    }
+    return count
+}
+```
+//or
+`const arrLength = arr => arr.length`
 1. Given an array and an item, your function should return the index at which the item is present.  
 **Example:**  
-**Input:** `indexOf([1,6,3,5,8,9], 3)` ––> **Output:** `2`
+**Input:** `indexOf([1,6,3,5,8,9], 3)` ––> **Output:** `2
+//Solution
+```
+const findIndex = (arr,givenElem) => {
+   let index=0
+   while(arr[index]!=givenElem){
+       index++
+   }
+   return index
+}
+```
+//or
+`const findIndex = (arr,givenElem) => arr.indexOf(givenElem)
+`
 1. Given an array and two numbers, your function should replace all entries of first number in an array with the second number.  
 **Example:**  
 **Input:** `replace([1,5,3,5,6,8], 5, 10)` ––> **Output:** `[1,10,3,10,6,8]`
+//Solution
+```
+const replace = (arr,toReplace,replaceWith) => {
+    arr = arr.map( element => element===toReplace? replaceWith: element)
+    return arr
+}
+```
+//or
+```
+const replace = (arr,toReplace,replaceWith) => {
+    let result=[]
+    arr.forEach( element => {
+        result.push(element===toReplace? replaceWith: element)
+    })
+    return result
+}
+```
+
+
 1. Given two arrays, your function should return single merged array.  
 **Example:**  
 **Input:** `mergeArray([1,3,5], [2,4,6])` ––> **Output:** `[1,3,5,2,4,6]`
+// Solution
+`const merge = (arr1,arr2) => [...arr1,...arr2]`
+//or
+`const mergeArray = (...args) => {
+   return [].concat(...args)
+  }
+  `
 1. Given a string and an index, your function should return the character present at that index in the string.  
 **Example:**  
 **Input:** `charAt("neoGcamp", 4)` ––> **Output:** `c`
+// Solution
+`const charAtIndex = (str,index) => str.charAt(index)`
+//or
+`const charAtIndex = (str,index) => str[index]`
 1. Given two dates, your function should return which one comes before the other.  
 **Example:**  
 **Input:** `minDate('02/05/2021', '24/01/2021')` ––> **Output:** `24/01/2021`
